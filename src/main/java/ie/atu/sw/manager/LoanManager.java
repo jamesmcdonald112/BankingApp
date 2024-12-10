@@ -1,4 +1,4 @@
-package ie.atu.sw.finance;
+package ie.atu.sw.manager;
 
 import ie.atu.sw.account.BankAccount;
 import ie.atu.sw.validation.InputValidator;

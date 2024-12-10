@@ -8,7 +8,8 @@ import org.junit.platform.suite.api.Suite;
 @SelectPackages("ie.atu.sw")
 @IncludePackages({
         "ie.atu.sw.account",
-        "ie.atu.sw.finance",
+        "ie.atu.sw.manager",
+        "ie.atu.sw.transaction",
         "ie.atu.sw.validation"
 })
 public class AllTests {

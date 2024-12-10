@@ -107,16 +107,6 @@ class BankAccountTest {
     }
 
     /**
-     * Test to ensure negative amounts cannot be used to increase the balance. An
-     * IllegalArgumentException is thrown if the amount is negative
-     */
-    @Test
-    public void testIncreaseBalanceNegativeAmountThrowsException() {
-        assertThrows(IllegalArgumentException.class, () -> account.increaseBalance(-50),
-                "Increasing the balance by a negative amount should throw InputValidatorException");
-    }
-
-    /**
      * Tests that the account balance is decreased correctly.
      *
      * @param amountToSubtract The amount to decrease the balance by
@@ -141,16 +131,6 @@ class BankAccountTest {
                 "The account balance should be " + expectedBalance + " after decreasing the " +
                         "starting balance of " + startingBalance +
                         " it by " + amountToSubtract);
-    }
-
-    /**
-     * Test to ensure negative amounts cannot be used to increase the balance. An
-     * IllegalArgumentException is thrown if the amount is negative
-     */
-    @Test
-    public void testDecreaseBalanceNegativeAmountThrowsException() {
-        assertThrows(IllegalArgumentException.class, () -> account.increaseBalance(-50),
-                "Decreasing the balance by a negative amount should throw IllegalArgumentException");
     }
 
     /**
@@ -182,16 +162,6 @@ class BankAccountTest {
                 "after increasing the starting loan of " + startingAmount + "  by " + amountToIncrease);
     }
 
-    /**
-     * Test to ensure negative amounts cannot be used to increase the loan. An
-     * IllegalArgumentException is thrown if the amount is negative
-     */
-    @Test
-    public void testIncreaseLoanNegativeAmountThrowsException() {
-        assertThrows(IllegalArgumentException.class, () -> account.increaseLoan(-100),
-                "Increasing the loan by a negative amount should throw an " +
-                        "IllegalArgumentException");
-    }
 
     /**
      * Tests that the loa is decreased correctly.
@@ -213,17 +183,6 @@ class BankAccountTest {
         // Check the loan amount
         assertEquals(expectedLoan, account.getLoan(), "The loan should be " + expectedLoan + " " +
                 "after decreasing the starting loan of " + startingBalance + "  by " + amountToDecrease);
-    }
-
-    /**
-     * Test to ensure negative amounts cannot be used to decrease the loan. An
-     * IllegalArgumentException is thrown if the amount is negative
-     */
-    @Test
-    public void testDecreaseLoanNegativeAmountThrowsException() {
-        assertThrows(IllegalArgumentException.class, () -> account.decreaseLoan(-100),
-                "Increasing the loan by a negative amount should throw an " +
-                        "IllegalArgumentException");
     }
 
     /**

@@ -1,7 +1,6 @@
-package ie.atu.sw.finance;
+package ie.atu.sw.transaction;
 
 import ie.atu.sw.account.BankAccount;
-import ie.atu.sw.exceptions.InsufficientFundsException;
 import ie.atu.sw.validation.InputValidator;
 
 public class AccountTransaction {
@@ -30,4 +29,6 @@ public class AccountTransaction {
         account.decreaseBalance(amount);
         return true;
     }
+
+
 }

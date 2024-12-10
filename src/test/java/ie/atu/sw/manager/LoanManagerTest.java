@@ -1,8 +1,8 @@
-package ie.atu.sw.finance;
+package ie.atu.sw.manager;
 
 import ie.atu.sw.account.BankAccount;
 import ie.atu.sw.exceptions.ExcessLoanRepaymentException;
-import ie.atu.sw.exceptions.InsufficientFundsException;
+import ie.atu.sw.manager.LoanManager;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;

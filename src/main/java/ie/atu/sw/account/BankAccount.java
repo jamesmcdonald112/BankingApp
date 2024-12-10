@@ -33,15 +33,11 @@ public class BankAccount {
 
     // Increase the balance by the amount
     public void increaseBalance(double amount) {
-        InputValidator.checkPositive(amount, "The amount must be entered as a positive number to " +
-                "increase the balance");
         this.balance += amount;
     }
 
     // Decrease the balance by the amount
     public void decreaseBalance(double amount) {
-        InputValidator.checkPositive(amount, "The amount must be entered as a positive number to " +
-                "decrease the balance");
         this.balance -= amount;
     }
 
@@ -53,15 +49,11 @@ public class BankAccount {
 
     // Increase the loan by the amount
     public void increaseLoan(double amount) {
-        InputValidator.checkPositive(amount, "The amount must be entered as a positive number to " +
-                "increase the loan");
         this.loan += amount;
     }
 
     // Decrease the loan by the amount
     public void decreaseLoan(double amount) {
-        InputValidator.checkPositive(amount, "The amount must be entered as a positive number to " +
-                "decrease the balance");
         this.loan -= amount;
     }
 }
