@@ -8,7 +8,7 @@ public class InputValidator {
     /**
      * Validates the amount provided is a positive number
      *
-     * @param amount the number to validate
+     * @param amount  the number to validate
      * @param message the error message
      * @throws IllegalArgumentException if the amount is a negative number
      */
@@ -21,7 +21,7 @@ public class InputValidator {
     /**
      * Validates there is sufficient funds in the account
      *
-     * @param amount The amount for the transaction
+     * @param amount  The amount for the transaction
      * @param balance The balance to be checked
      * @param message The error message
      * @throws InsufficientFundsException if the amount exceeds the balance
@@ -35,9 +35,9 @@ public class InputValidator {
     /**
      * Validates if the amount does not exceed the remaining loan debt.
      *
-     * @param amount The amount for the transaction
+     * @param amount      The amount for the transaction
      * @param loanBalance The balance of the loan remaining
-     * @param message The error message
+     * @param message     The error message
      * @throws ExcessLoanRepaymentException if the amount exceeds the loan balance
      */
     public static void checkSufficientLoanRepayment(double amount, double loanBalance,

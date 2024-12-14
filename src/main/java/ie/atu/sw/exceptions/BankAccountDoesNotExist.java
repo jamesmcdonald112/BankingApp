@@ -1,6 +1,6 @@
 package ie.atu.sw.exceptions;
 
-public class BankAccountDoesNotExist extends RuntimeException{
+public class BankAccountDoesNotExist extends RuntimeException {
 
     /**
      * An BankAccountDoesNotExist is constructed with a specified message when an attempt is

@@ -26,8 +26,10 @@ public class AccountManager {
     }
 
     // GETTERS AND SETTERS
+
     /**
      * Gets the total deposits available in the bank.
+     *
      * @return The total deposits.
      */
     public double getTotalDeposits() {
@@ -36,6 +38,7 @@ public class AccountManager {
 
     /**
      * Gets the balance of a specific account holder.
+     *
      * @param accountHolder The name of the account holder.
      * @return The balance if the account exists, otherwise null.
      */
@@ -46,6 +49,7 @@ public class AccountManager {
 
     /**
      * Gets the loan amount of a specific account holder.
+     *
      * @param accountHolder The name of the account holder.
      * @return The loan amount if the account exists, otherwise null.
      */
@@ -58,21 +62,23 @@ public class AccountManager {
 
     /**
      * Helper method to find an account by account holder's name.
+     *
      * @param accountHolder The name of the account holder.
      * @return The Account object if found, otherwise null.
      */
-     private BankAccount findAccount(String accountHolder) {
+    private BankAccount findAccount(String accountHolder) {
         for (BankAccount account : accounts) {
             if (account.getAccountHolder().equals(accountHolder)) {
                 return account;
             }
         }
-       throw new BankAccountDoesNotExist("Account not found for " + accountHolder);
+        throw new BankAccountDoesNotExist("Account not found for " + accountHolder);
     }
 
     /**
      * Adds a new account with an initial deposit.
-     * @param accountHolder The name of the new account holder.
+     *
+     * @param accountHolder  The name of the new account holder.
      * @param initialDeposit The initial deposit amount.
      */
     public void addAccount(String accountHolder, double initialDeposit) {
@@ -89,8 +95,9 @@ public class AccountManager {
 
     /**
      * Deposits money into an account.
+     *
      * @param accountHolder The name of the account holder.
-     * @param amount The deposit amount.
+     * @param amount        The deposit amount.
      * @return True if the deposit is successful, otherwise false.
      */
     public boolean deposit(String accountHolder, double amount) {
@@ -102,8 +109,9 @@ public class AccountManager {
 
     /**
      * Withdraws money from an account.
+     *
      * @param accountHolder The name of the account holder.
-     * @param amount The withdrawal amount.
+     * @param amount        The withdrawal amount.
      * @return True if the withdrawal is successful, otherwise false.
      */
     public boolean withdraw(String accountHolder, double amount) {
@@ -115,8 +123,9 @@ public class AccountManager {
 
     /**
      * Approves a loan for an account holder.
+     *
      * @param accountHolder The name of the account holder.
-     * @param loanAmount The loan amount.
+     * @param loanAmount    The loan amount.
      * @return True if the loan is approved, otherwise false.
      */
     public boolean approveLoan(String accountHolder, double loanAmount) {
@@ -132,8 +141,9 @@ public class AccountManager {
 
     /**
      * Repays a part of the loan for an account holder.
+     *
      * @param accountHolder The bank account of the account holder.
-     * @param amount The repayment amount.
+     * @param amount        The repayment amount.
      * @return True if the repayment is successful, otherwise false.
      */
     public boolean repayLoan(String accountHolder, double amount) {

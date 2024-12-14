@@ -17,14 +17,6 @@ class LoanManagerTest {
     LoanManager loanManager;
 
     /**
-     * Logs a message to indicate the start of LoanManagerTest
-     */
-    @BeforeAll
-    public static void setupAll() {
-        System.out.println("Beginning LoanManager tests...");
-    }
-
-    /**
      * Create a new loanManager instance for each test
      */
     @BeforeEach
@@ -118,11 +110,4 @@ class LoanManagerTest {
                         "ExcessLoanRepaymentException");
     }
 
-    /**
-     * Logs a message indicating the end of LoanManagerTest
-     */
-    @AfterAll
-    public static void endAll() {
-        System.out.println("LoanManager tests complete");
-    }
 }

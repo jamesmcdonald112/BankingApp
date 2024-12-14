@@ -12,17 +12,8 @@ import org.junit.jupiter.params.provider.CsvSource;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AccountTransactionTest {
-    // INSTANCE VARIABLES
     BankAccount account;
     AccountTransaction accountTransaction;
-
-    /**
-     * Logs a message indicating the start of AccountTransactionTest
-     */
-    @BeforeAll
-    public static void setupAll() {
-        System.out.println("AccountTransactionTest is starting...");
-    }
 
     /**
      * Creates a new account transaction instance for each test
@@ -129,11 +120,5 @@ class AccountTransactionTest {
                         "InsufficientFundsException");
     }
 
-    /**
-     * Logs a message indicating the end of AccountTransactionTest
-     */
-    @AfterAll
-    public static void afterALl() {
-        System.out.println("AccountTransactionTest complete");
-    }
+
 }

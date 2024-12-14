@@ -1,6 +1,6 @@
 package ie.atu.sw.exceptions;
 
-public class ExcessLoanRepaymentException extends RuntimeException{
+public class ExcessLoanRepaymentException extends RuntimeException {
 
     /**
      * An ExcessLoanRepaymentException is constructed with a specified message when an attempt is

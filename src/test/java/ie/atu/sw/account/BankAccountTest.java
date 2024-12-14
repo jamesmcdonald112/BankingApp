@@ -15,14 +15,6 @@ class BankAccountTest {
     private BankAccount account;
 
     /**
-     * Logs a message to indicate the start of Bank Account testing
-     */
-    @BeforeAll
-    public static void setupAll() {
-        System.out.println("Beginning BankAccount tests...");
-    }
-
-    /**
      * Creates a new BankAccount instance for each test.
      */
     @BeforeEach
@@ -30,7 +22,6 @@ class BankAccountTest {
         account = new BankAccount("James", 100.00);
     }
 
-    // ACCOUNT HOLDER NAME TESTS
 
     /**
      * Tests to ensure the correct name is returned.
@@ -68,8 +59,6 @@ class BankAccountTest {
         assertEquals(name, account.getAccountHolder(),
                 "The expected account holder name is " + name + ", but the actual name is " + account.getAccountHolder());
     }
-
-    // ACCOUNT BALANCE TESTS
 
     /**
      * Tests the account balance is returned correctly.
@@ -134,7 +123,7 @@ class BankAccountTest {
     }
 
     /**
-     * Tests that the laon amount is returned correctly
+     * Tests that the loan amount is returned correctly
      */
     @Test
     public void testGetLoan() {
@@ -164,7 +153,7 @@ class BankAccountTest {
 
 
     /**
-     * Tests that the loa is decreased correctly.
+     * Tests that the loan is decreased correctly.
      */
     @ParameterizedTest
     @CsvSource({
@@ -183,14 +172,6 @@ class BankAccountTest {
         // Check the loan amount
         assertEquals(expectedLoan, account.getLoan(), "The loan should be " + expectedLoan + " " +
                 "after decreasing the starting loan of " + startingBalance + "  by " + amountToDecrease);
-    }
-
-    /**
-     * Logs a message indicating the end of Bank Account testing
-     */
-    @AfterAll
-    public static void endAll() {
-        System.out.println("BankAccount tests complete");
     }
 
 

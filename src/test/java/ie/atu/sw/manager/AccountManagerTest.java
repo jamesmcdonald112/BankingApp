@@ -17,7 +17,7 @@ class AccountManagerTest {
     private static double initialDeposit;
 
     /**
-     * Creates an static instance of AccountManager for the test class
+     * Creates a static instance of AccountManager for the test class
      */
     @BeforeAll
     public static void beforeAllSetup() {
@@ -242,9 +242,11 @@ class AccountManagerTest {
     }
 
 
+    /**
+     * Sets accountManager to null
+     */
     @AfterAll
     public static void afterAllSetup() {
-        System.out.println("AccountManager tests complete");
         accountManager = null;
     }
 }
